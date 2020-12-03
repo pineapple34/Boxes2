@@ -1,0 +1,64 @@
+﻿<Window x:Class="Boxes2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Boxes2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="180.667" Width="500">
+    <Viewbox>
+        <Grid Width="472">
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label Content="Цвет фона" FontSize="10"/>
+            <ComboBox x:Name="fontColor" FontSize="10">
+                <ComboBoxItem Content="Красный"/>
+                <ComboBoxItem Content="Зеленый"/>
+                <ComboBoxItem Content="Синий"/>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
+            <Label Content="День" FontSize="10"/>
+            <TextBox x:Name="day"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="2" VerticalAlignment="Center">
+            <Label Content="Месяц" FontSize="10"/>
+        <ComboBox x:Name="month" FontSize="10">
+            <ComboBoxItem Content="Январь"/>
+            <ComboBoxItem Content="Февраль"/>
+            <ComboBoxItem Content="Март"/>
+            <ComboBoxItem Content="Апрель"/>
+            <ComboBoxItem Content="Май"/>
+            <ComboBoxItem Content="Июнь"/>
+            <ComboBoxItem Content="Июль"/>
+            <ComboBoxItem Content="Август"/>
+            <ComboBoxItem Content="Сентябрь"/>
+            <ComboBoxItem Content="Октябрь"/>
+            <ComboBoxItem Content="Ноябрь"/>
+            <ComboBoxItem Content="Декабрь"/>
+        </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="3" VerticalAlignment="Center">
+            <Label Content="Год" FontSize="10"/>
+            <TextBox x:Name="year"/>
+        </StackPanel>
+
+        <Button Content="Ок" Grid.Row="0" Grid.Column="4" Margin="10,38,10,17" Click="Button_Click"/>
+        <Label x:Name="output" FontSize="12" Margin="19,26,0,33" Grid.Row="1" Grid.ColumnSpan="3"/>
+    </Grid>
+    </Viewbox>
+</Window>
